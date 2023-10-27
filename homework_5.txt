@@ -1,0 +1,11 @@
+
+
+% Predicates
+sum_list([],0).
+
+sum_list([First|Tail], Sum) :-
+    sum_list(Tail, Sum1), Sum is First + Sum1.
+
+
+% Query
+?- sum_list([1, 1, 2, 3], Res), write(Res).
